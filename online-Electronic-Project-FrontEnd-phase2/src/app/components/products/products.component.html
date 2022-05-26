@@ -1,0 +1,211 @@
+
+
+
+<div class="" style="margin: 0 150px 0 0">
+  <div class = "">
+    <input class="form-control" type="text" name="productname" [(ngModel)]="productname"
+    placeholder="Search for products..."(keypress)="searchData()">
+  </div>
+  <!-- <div class="col-md-3">
+    <button style="margin-left: 1120px" class="btn btn-primary" (click)="searchData()">Search</button>
+  </div>  -->
+</div>
+
+<div>
+<select [(ngModel)]="selectedPrice" name="price">
+
+  <option *ngFor="let p of prices" ng-repeat="product in products" [value]="p">
+
+    <a>{{p}}</a>
+
+  </option>
+
+</select>
+
+<button (click)="onSelectedPrice(selectedPrice)">Show</button>
+
+</div>
+
+
+
+
+<div class="row">
+  
+<div class="col-sm-4" *ngFor = "let product of productList | paginate : {itemsPerPage:6, currentPage:p};">
+  
+  
+
+     <div class=" card"  style="margin: 10px 10px 10px 10px ; width:18rem; ">
+
+      <img [src]="product.product_image"width = 150px, height = 150px alt="">
+
+      <h3>Title:<a  [routerLink]="['/productdetail',product.productid]" >{{product.product_name}}</a> </h3>
+
+      <!-- <p>Description: {{ product.description}}</p> -->
+
+      <strong>Discount: {{ product.discount}}</strong> <p style="color: red;"></p>
+      <u>Price: {{product.price | currency:'INR'}}</u><br> 
+     
+
+
+
+      <button class="btn btn-primary" (click)=addtocart(product)>Add to cart</button>
+  </div>
+</div>
+
+</div>  
+
+<div class="pagination justify-content-center">
+
+  <pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls>
+
+</div>
+
+
+
+
+
+
+
+<!-- <div class="container" *ngFor="let p of productList">
+
+  <div class="card">
+
+    <div class="container-fliud">
+
+      <div class="wrapper row">
+
+        <div class="preview col-md-6">
+
+
+
+          <div class="preview-pic tab-content">
+
+            <div class="tab-pane active" id="pic-1">
+
+              <ng-container *ngIf="p.productimage">
+
+              <figure class="product__figure">
+
+                  <img
+
+                      loading="lazy"
+
+                      *ngIf="p.product_image"
+
+                      width="500px"
+
+                      height="500px"
+
+                      class="product__image"
+
+                      [src]="p.product_image"
+
+                      alt=""
+
+                  />
+
+              </figure>
+
+          </ng-container></div>
+
+          <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
+
+            <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
+
+            <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
+
+            <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
+
+          </div>
+
+          <ul class="preview-thumbnail nav nav-tabs">
+
+            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+
+
+            <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+
+            <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+
+            <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+
+            <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+
+          </ul>
+
+
+
+        </div>
+
+
+        <div class="details col-md-6">
+
+          <h3 class="product-title">{{p.product_name}}</h3>
+
+          <div class="rating">
+
+            <div class="stars">
+
+              <span class="fa fa-star checked"></span>
+
+              <span class="fa fa-star checked"></span>
+
+              <span class="fa fa-star checked"></span>
+
+              <span class="fa fa-star"></span>
+
+              <span class="fa fa-star"></span>
+
+            
+
+          <div class="product__content">
+
+            <h5>Description: </h5>
+
+
+            <p class="product__description">{{ p.description }}</p>
+
+          </div>
+  
+            <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+  
+            <h4 class="price">Discount price: <span>{{p.discount | currency: 'INR'}}</span></h4>
+  
+            <footer class="product__footer">
+
+              <em class="product__price">Actual Price: {{ p.price | currency: 'INR' }}</em>
+
+              
+
+            <br>
+
+
+
+        </footer>
+
+          <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+
+
+
+          <div class="action">
+
+            <button class="add-to-cart btn btn-default" type="button" routerLink="cart">Add to Cart</button>
+
+            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+
+            <a class="btn btn-default" type="button" style="margin-left: 5px;" [routerLink]="['/products']">Continue Shopping</a>
+
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div> -->

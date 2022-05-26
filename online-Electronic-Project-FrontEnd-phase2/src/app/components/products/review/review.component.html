@@ -1,0 +1,33 @@
+<div class="container col-md-7 shadow p-3 mb-5 bg-body rounded"  style="margin-top: 50px;">
+
+  <form #review="ngForm" (ngSubmit)="onSubmit(review.value)">
+
+    <div class="mb-3" style="margin-top: 50px;">
+
+      <label for="exampleFormControlInput1" class="form-label">Rating</label>
+
+      <input type="rating" class="form-control" ngModel name="rating" id="exampleFormControlInput1" placeholder="choose number between 0-10">
+
+    </div>
+
+    <div class="mb-3">
+
+      <label for="review" class="form-label">Tell Us About Product & Service</label>
+
+      <textarea type="reviewtext" class="form-control"  ngModel name="reviewtext" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+    </div>
+
+    <div style="margin-bottom: 50px;">
+
+      <button  href="javascript:void(0)" class="shop-more btn btn-default" type="submit" style="margin-left: 70px;">Add Review</button>
+
+        <button class="shop-more btn btn-default" type="button" style="margin-left: 5px;" [routerLink]="['/products']">Continue Shopping</button>
+
+    </div>
+
+
+
+  </form>
+
+</div>

@@ -1,0 +1,26 @@
+<h1> Admin</h1>
+
+<div class="container row">
+  <div class="col-md-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of adminusers">
+          <td>{{user.userid}}</td>
+          <td>{{user.username}}</td>
+          <td><button type="button" class="btn btn-primary" (click)="viewUser(user.userid)">Show Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <app-viewuser *ngIf="action === 'view'" [user]="selectedUser"></app-viewuser>
+  </div>
+</div>

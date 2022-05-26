@@ -1,0 +1,26 @@
+<h1>Product Details</h1>
+
+<table>
+  <tr>
+    <td>Product Id</td>
+    <td>{{product.productid}}</td>
+  </tr>
+  <tr>
+    <td>Product Name</td>
+    <td>{{product.product_name}}</td>
+  </tr>
+  <tr>
+    <td>Product Price</td>
+    <td>{{product.price}}</td>
+  </tr>
+  <tr>
+    <td>Product Description</td>
+    <td>{{product.description}}</td>
+  </tr>
+</table>
+<br>
+
+<a class="btn btn-small btn-warning" (click)="editProduct()">Edit</a>
+<div class="space">
+</div>
+<a class="btn btn-small btn-danger" (click)="deleteProduct()">Delete</a>

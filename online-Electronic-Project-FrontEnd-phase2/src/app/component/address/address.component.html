@@ -1,0 +1,169 @@
+<div class="container ">
+
+  <div class="col-md-6">
+     <div class="card-body text-black">
+       <h3 class="mb-4 text-uppercase">Delivery Address</h3>
+       <form action="" #addressForm="ngForm">
+          
+           
+       <div class="form-outline mb-1">
+         <label class="form-label" for="city">City</label>
+       <input type="text" id="city" name ="city"
+       class="form-control" 
+       placeholder="city" [(ngModel)]="address.city">
+     </div>
+            
+       <div class="form-outline mb-1">
+           <label class="form-label" for="street">Street</label>
+         <input type="text" id="street" name ="street"
+         class="form-control" 
+         placeholder="Street / Locality" [(ngModel)]="address.street">
+       </div>
+ 
+             
+       <div class="form-outline mb-1">
+           <label class="form-label" for="state">State</label>
+         <input type="text" id="state" name ="state"
+         class="form-control" 
+         placeholder="State" [(ngModel)]="address.state">
+       </div>
+             
+       <div class="form-outline mb-1">
+           <label class="form-label" for="country">Country</label>
+         <input type="text" id="country" name ="country"
+         class="form-control" 
+         placeholder="Country" [(ngModel)]="address.country">
+       </div>
+     
+       <div class="row">
+         
+       <div class="form-outline mb-1">
+           <label class="form-label" for="zip">ZipCode</label>
+         <input type="text" id="zipcode" name="zipcode"
+         class="form-control" 
+         placeholder="zipcode or Pin code" [(ngModel)]="address.zipcode">
+       </div>
+       </div>
+       <div class="col-md-7 mb-1">
+       <div class="d-flex justify-content-end pt-3">
+         <button  type="submit" class="btn btn-success btn-block btn-lg" (click)="addAddress()"
+           style="vertical-align: auto;" routerLink="/placeorder">Submit</button>
+         
+ 
+       </div>
+       </div>
+    
+   </form>
+   </div>
+ </div>
+ </div>
+ <button   class="btn btn-success btn-block btn-lg" routerLink="/placeorder" class="block">place to order</button>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--<div class="row">
+     <div class="col-75">
+       <div class="container">
+          <form action="/action_page.php">
+              <div class="row">
+                <div class="col-50">
+                   <h3>Your Order Details</h3>
+                      <form>
+                        <div class="cart-product">
+                          <table class="table table-responsive">
+                            <thead>
+                               <tr>
+                                <th>sr no</th>
+                                <th> Product Name</th>
+                                 <th> Description </th>
+                                 <th>Price</th>
+                               </tr>
+                          </thead>
+                          <tbody>
+  
+                 <tr *ngFor="let item of products; let i = index">
+  
+                 <td>{{i+1}}</td>
+                              
+                <td>{{item.product_name}}</td>
+                              
+                <td style="width: 25%;">{{item.description}}</td>
+                              
+                <th style="width: 12%;">{{item.price}}</th>
+                              
+               <!-- <td style="width: 25%;">{{item.value}}</td> 
+  
+              </tr>
+  
+            </tbody>
+            
+            </table>
+            
+            </div>
+            
+          <div class="col-50">
+            
+              <h3>Shipping Address</h3>
+            
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            
+              <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            
+              <input type="text" id="email" name="email" placeholder="john@example.com">
+            
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            
+              <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+            
+              <input type="text" id="city" name="city" placeholder="New York">
+            
+              </div>
+            
+            <label>
+  
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+  
+         </label>
+        
+      <button routerLink="/placeorder" (click)="placeOrder()"  class="btn btn-primary">Place to Order</button>
+  
+      </form>  
+    
+          <!-- <input type="submit" value="Continue to checkout" class="btn"> 
+  
+  </div>
+  
+  </div>
+ 
+ -->

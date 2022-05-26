@@ -1,0 +1,25 @@
+<div class="row">
+
+    <div class="col-sm-4" *ngFor="let product of categorydetail.product" >
+    
+      <div class=" border " style="margin: 10px 10px 10px 10px ;">
+  
+        <img [src]="product.product_image"width = 150px, height = 150px alt="">
+  
+        <h3>Title:<a  [routerLink]="['/productdetail',product.productid]" >{{product.product_name}}</a> </h3>
+  
+        <!-- <p>Description: {{ product.description}}</p> -->
+  
+        <strong>Discount: {{ product.discount}}</strong><p style="color: red;"></p>
+          <!-- <p style="color: red;">Discount: {{product.discount}}</p>  -->
+  
+        <u>Price: {{product.price | currency:'INR'}}</u><br>
+  
+        <button class="btn btn-primary" (click)=addtocart(product)>Add to cart</button>
+  
+        <!-- <button class="btn btn-outline-success">Add to Cart</button> -->
+    </div>
+  </div>
+  
+  </div> 
+

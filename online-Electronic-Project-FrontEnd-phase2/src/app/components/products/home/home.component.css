@@ -1,0 +1,16 @@
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+h1{
+    color: darkblue;
+    padding: 20;
+    
+}
+    

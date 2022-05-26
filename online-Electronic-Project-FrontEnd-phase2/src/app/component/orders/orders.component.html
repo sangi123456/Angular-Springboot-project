@@ -1,0 +1,125 @@
+<div>
+    <h4 class="display-4">All orders</h4>
+</div>
+<hr>
+<div>
+<div *ngFor="let order of orders; let i = index;">
+    <div class="d-flex p-2 card border shadow-sm p-3 mb-5 bg-white rounded ">
+
+        <div class="id">
+            <b>Order no: </b>{{order.order_id}} <!--&nbsp;-->
+        </div>
+        
+        <div class="date">
+            <b>Date-Created: </b>{{order.date_created| date : 'mediumDate'}} <!--&nbsp;-->
+        </div>
+
+        <div class="date">
+            <b>Date-Updated: </b>{{order.date_updated| date : 'mediumDate'}} <!--&nbsp;-->
+        </div>
+
+        <div class="amount">
+            <b>Total price: </b>{{order.total_price | currency:'INR'}}
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+
+<!--<div class="container">
+
+    <div class="card-table">
+
+        <div class="row">
+
+            <table class="table table-responsive">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Order Id</th>
+                       <th>Total Price</th>
+                        <th>Date Created</th>
+                        <th>Date date_updated</th>
+                        <th>User</th>
+                       <th>Address</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let item of orders">
+
+                        <td>{{item.order_id}}</td>
+                        <td>{{item.total_price }}</td>
+                        <td>{{item.date_created}}</td>
+                        <td>{{item.date_updated}}</td>
+                        <td>{{item.userid}}</td>
+                        <td>{{item.order_address_id}}</td>
+                        <td></td>
+
+                        <!-- <td>{{item.userid}}</td>
+
+                        <td>{{item.addressid }}</td> 
+
+
+
+
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+
+
+        </div>
+
+
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<ng-container *ngIf="orders.length >0">
+    <br>
+<div class="row" *ngFor="let order of orders; let i = index">
+        <a [routerLink]="['/orders',order.order_id]" style="text-decoration: none;">
+        <div class="d-flex p-2 cart border shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="id">
+            <b>Order no.: </b>{{order.order_id}}&nbsp;
+        </div>
+        <div class="date">
+            <b>Date: </b>{{order.date_created| date : 'mediumDate'}}&nbsp;
+        </div>
+
+        <div class="date">
+            <b>Date: </b>{{order.date_updated| date : 'mediumDate'}}&nbsp;
+        </div>
+
+        <div class="amount">
+            <b>Total price: </b>{{order.total_price | currency:'INR'}}
+        </div>
+        <br>
+    </div>
+</a>
+</div>
+
+</ng-container>
+-->
